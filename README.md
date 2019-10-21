@@ -1,6 +1,6 @@
 # Background_Oriented_Schlieren
 
-This post contains all the code (or links to code/programs) that you will need for BOS processing.  This post accompanies my YouTube video on the subject, which I recommend you watch.  If you would rather read, I have a comprehensive PDF document on the topic as well (it is too big for GitHub, so you can find it at my website).  All of these files can also be downloaded from my website.
+This post contains all the code (or links to code/programs) that you will need for BOS processing.  This post accompanies my [YouTube video](https://www.youtube.com/watch?v=VCUN59x0LF4) on the subject, which I recommend you watch.  If you would rather read, I have a comprehensive PDF document on the topic as well (it is too big for GitHub, so you can find it at my website).  All of these files can also be downloaded from my website.
 
 There are some free programs you will need for this project.  Below is a comprehensive list of those used in my video.
 
