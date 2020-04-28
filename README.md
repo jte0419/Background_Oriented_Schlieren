@@ -15,3 +15,7 @@ If you are running my Python GUI program, you will also need to download the fol
 * [normxcorr2.py](https://github.com/Sabrewarrior/normxcorr2-python/blob/master/normxcorr2.py)
 
 Again, all the files can also be found on my website.
+
+# Notes
+
+* If you are running this program on a Mac and get an error, there is a good change it's because of the difference between Windows and Mac when it comes to folder/directory naming.  Try switching all the slashes in the directory name to "/" instead of "\".  For instance, one location where you'll need to change it in the MATLAB code is in the *pushSelectVideoDirectory_Callback* function callback.
