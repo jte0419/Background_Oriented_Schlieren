@@ -571,7 +571,7 @@ class GUI_BOS:
         
         fm            = plt.get_current_fig_manager()                           # Get the current figure manager
         geom          = fm.window.geometry()                                    # Get the geometry of the window
-        x,y,winW,winH = geom.getRect()                                          # Exract the geometry of the window
+        x,y,winW,winH = geom.getRect()                                          # Extract the geometry of the window
         fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)              # Set the window geometry to new values
         
     # ===========================
@@ -666,7 +666,7 @@ class GUI_BOS:
                         rPeak = rC - 2                                          # Subtract one from row peak
                     if (cPeak == 0):                                            # If column peak is zero
                         cPeak = cPeak + 1                                       # Add one to column peak
-                    if (cPeak == cC-1):                                         # If column peak is one less than size of CC-matrix columsn
+                    if (cPeak == cC-1):                                         # If column peak is one less than size of CC-matrix columns
                         cPeak = cC - 2                                          # Subtract one from column peak
                                 
                     # Sub-pixel peak point (3-point Gaussian)
@@ -716,13 +716,13 @@ class GUI_BOS:
         
         # Apply threshold to results
         quivU[abs(quivU) > thresh] = np.nan                                     # Apply min/max value threshold to U-displacement
-        quivV[abs(quivV) > thresh] = np.nan                                    # Apply min/max value threshold to V-displacement
+        quivV[abs(quivV) > thresh] = np.nan                                     # Apply min/max value threshold to V-displacement
         quivVel = np.sqrt(np.square(quivU) + np.square(quivV))                  # Compute total displacement from thresholded values
         
         # Re-set the threshold for total displacement and threshold all data
         testVal = np.sqrt(thresh**2 + thresh**2)                                # Compute total displacement threshold
-        quivU[quivVel == testVal]   = np.nan                                    # Apply threshold to total displacement
-        quivV[quivVel == testVal]   = np.nan                                    # Apply threshold to total displacement
+        quivU[quivVel == testVal]   = np.nan                                    # Apply threshold to X displacement
+        quivV[quivVel == testVal]   = np.nan                                    # Apply threshold to Y displacement
         quivVel[quivVel == testVal] = np.nan                                    # Apply threshold to total displacement
         
         # Set default colorbar limits to zero to keep things clean
@@ -760,7 +760,7 @@ class GUI_BOS:
             
             fm            = plt.get_current_fig_manager()                       # Get the current figure manager
             geom          = fm.window.geometry()                                # Get the geometry of the window
-            x,y,winW,winH = geom.getRect()                                      # Exract the geometry of the window
+            x,y,winW,winH = geom.getRect()                                      # Extract the geometry of the window
             fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)          # Set the window geometry to new values
             
         # Plot the original image contour if user wants to
@@ -803,7 +803,7 @@ class GUI_BOS:
             
             fm            = plt.get_current_fig_manager()                       # Get the current figure manager
             geom          = fm.window.geometry()                                # Get the geometry of the window
-            x,y,winW,winH = geom.getRect()                                      # Exract the geometry of the window
+            x,y,winW,winH = geom.getRect()                                      # Extract the geometry of the window
             fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)          # Set the window geometry to new values
             
             # Set the color axis limits in the Entry boxes
@@ -829,7 +829,7 @@ class GUI_BOS:
 
             fm            = plt.get_current_fig_manager()                       # Get the current figure manager
             geom          = fm.window.geometry()                                # Get the geometry of the window
-            x,y,winW,winH = geom.getRect()                                      # Exract the geometry of the window
+            x,y,winW,winH = geom.getRect()                                      # Extract the geometry of the window
             fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)          # Set the window geometry to new values
             
             # Set the color axis limits in the Entry boxes
@@ -855,7 +855,7 @@ class GUI_BOS:
             
             fm            = plt.get_current_fig_manager()                       # Get the current figure manager
             geom          = fm.window.geometry()                                # Get the geometry of the window
-            x,y,winW,winH = geom.getRect()                                      # Exract the geometry of the window
+            x,y,winW,winH = geom.getRect()                                      # Extract the geometry of the window
             fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)          # Set the window geometry to new values
             
             # Set the color axis limits in the Entry boxes
@@ -881,7 +881,7 @@ class GUI_BOS:
             
             fm            = plt.get_current_fig_manager()                       # Get the current figure manager
             geom          = fm.window.geometry()                                # Get the geometry of the window
-            x,y,winW,winH = geom.getRect()                                      # Exract the geometry of the window
+            x,y,winW,winH = geom.getRect()                                      # Extract the geometry of the window
             fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)          # Set the window geometry to new values
             
             # Set the color axis limits in the Entry boxes
@@ -951,7 +951,7 @@ class GUI_BOS:
         
         fm            = plt.get_current_fig_manager()                           # Get the current figure manager
         geom          = fm.window.geometry()                                    # Get the geometry of the window
-        x,y,winW,winH = geom.getRect()                                          # Exract the geometry of the window
+        x,y,winW,winH = geom.getRect()                                          # Extract the geometry of the window
         fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)              # Set the window geometry to new values
         
     # ============================================
@@ -984,7 +984,7 @@ class GUI_BOS:
         
         fm            = plt.get_current_fig_manager()                           # Get the current figure manager
         geom          = fm.window.geometry()                                    # Get the geometry of the window
-        x,y,winW,winH = geom.getRect()                                          # Exract the geometry of the window
+        x,y,winW,winH = geom.getRect()                                          # Extract the geometry of the window
         fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)              # Set the window geometry to new values
             
     # ============================================
@@ -1017,7 +1017,7 @@ class GUI_BOS:
         
         fm            = plt.get_current_fig_manager()                           # Get the current figure manager
         geom          = fm.window.geometry()                                    # Get the geometry of the window
-        x,y,winW,winH = geom.getRect()                                          # Exract the geometry of the window
+        x,y,winW,winH = geom.getRect()                                          # Extract the geometry of the window
         fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)              # Set the window geometry to new values
         
     # ==============================================
@@ -1055,11 +1055,10 @@ class GUI_BOS:
         
         fm            = plt.get_current_fig_manager()                           # Get the current figure manager
         geom          = fm.window.geometry()                                    # Get the geometry of the window
-        x,y,winW,winH = geom.getRect()                                          # Exract the geometry of the window
+        x,y,winW,winH = geom.getRect()                                          # Extract the geometry of the window
         fm.window.setGeometry(x+self.winXS,y+self.winYS,winW,winH)              # Set the window geometry to new values
         
 root = Tk()
 root.wm_title("BOS Processing")                                                 # Set window title
-#root.iconbitmap("JTE_Logo.ico")                                                 # Set icon bitmap
 gui_bos = GUI_BOS(root)                                                         # Instantiate the class GUI_BOS
 root.mainloop()
