@@ -196,7 +196,6 @@ drawnow();
     {'*.jpg;*.png;*.tif;*.tiff','Image Files (*.jpg;*.png;*.tif;*.tiff)'},...
     'Select Image 2',...
     'C:\Users\Josh\Documents\YouTube_Files\DIY_BOS\Section_9_Formula_1_Car\Frames');
-%     'C:\Users\Josh\Documents\YouTube_Files\AAA_DIY_BOS');
 if (c == 0)                                                                 % If user canceled
     set(hObject,'BackgroundColor',[0.0431 0.5176 0.7804],...
                 'ForegroundColor','w');                                     % Set colors back to normal
@@ -239,7 +238,6 @@ drawnow();
     {'*.jpg;*.png;*.tif;*.tiff','Image Files (*.jpg;*.png;*.tif;*.tiff)'},...
     'Select Image 2',...
     'C:\Users\Josh\Documents\YouTube_Files\DIY_BOS\Section_9_Formula_1_Car\Frames');
-%     'C:\Users\Josh\Documents\YouTube_Files\AAA_DIY_BOS');
 if (c == 0)                                                                 % If user canceled
     set(hObject,'BackgroundColor',[0.0431 0.5176 0.7804],...
                 'ForegroundColor','w');                                     % Set colors back to normal
@@ -380,7 +378,7 @@ for i = 1:1:numR                                                            % Lo
             
             % Find the peak indices of the cross-correlation map
             [rowP,colP] = find(c == max(c(:)));                             % Maximum indices of cross-correlation map
-        	rowP = rowP(1);
+            rowP = rowP(1);
             colP = colP(1);
             
             if (get(handles.checkSubPixelResolution,'Value') == 1)
@@ -569,15 +567,12 @@ if (checkPlotOrig == 1)
              'LineWidth',2,'LineStyle','--');
     hold on;
     if (popXYTot == 1)
-%         surf(XX,YY,quivU,'EdgeColor','none');
         surf(XXPlot,YYPlot,ZZPlot,'EdgeColor','none');
         caxis([min(min(quivU)) max(max(quivU))]);
     elseif (popXYTot == 2)
-%         surf(XX,YY,quivV,'EdgeColor','none');
         surf(XXPlot,YYPlot,ZZPlot,'EdgeColor','none');
         caxis([min(min(quivV)) max(max(quivV))]);
     elseif (popXYTot == 3)
-%         surf(XX,YY,quivVel,'EdgeColor','none');
         surf(XXPlot,YYPlot,ZZPlot,'EdgeColor','none');
         caxis([min(min(quivVel)) max(max(quivVel))]);
     end
@@ -585,7 +580,7 @@ if (checkPlotOrig == 1)
     h2 = imshow(Irgb);
     set(h2,'AlphaData',trans);
     
-	% Get colormap limits and set to edit textboxes
+    % Get colormap limits and set to edit textboxes
     cl = caxis;
     set(handles.editCS_OrigImg,'String',num2str(cl(1)));
     set(handles.editCE_OrigImg,'String',num2str(cl(2)));
@@ -603,7 +598,6 @@ if (checkPlotX == 1)
     figX = figure(4);
     set(gcf,'Color','White');
     cla; hold on; grid off;
-%     surf(quivX,quivY,quivU,'EdgeColor','none');
     surf(XXPlot,YYPlot,ZZPlot,'EdgeColor','none');
     colormap(popStr);
     colorbar;
@@ -612,15 +606,15 @@ if (checkPlotX == 1)
     title('X-Displacement');
     axis('equal');
 
-	% Get colormap limits and set to edit textboxes
+    % Get colormap limits and set to edit textboxes
     cl = caxis;
     set(handles.editCS_X,'String',num2str(cl(1)));
     set(handles.editCE_X,'String',num2str(cl(2)));
     set(handles.editCS_X,'Enable','on');
     set(handles.editCE_X,'Enable','on');
-	set(handles.pushSelectRegion_X,'Enable','on');                          % Enable pushbutton for region selection
+    set(handles.pushSelectRegion_X,'Enable','on');                          % Enable pushbutton for region selection
 else
-	set(handles.editCS_X,'Enable','off');
+    set(handles.editCS_X,'Enable','off');
     set(handles.editCE_X,'Enable','off');
     set(handles.pushSelectRegion_X,'Enable','off');                         % Disable pushbutton for region selection
 end
@@ -630,7 +624,6 @@ if (checkPlotY == 1)
     figY = figure(5);
     set(gcf,'Color','White');
     cla; hold on; grid off;
-%     surf(quivX,quivY,quivV,'EdgeColor','none');
     surf(XXPlot,YYPlot,ZZPlot,'EdgeColor','none');
     colormap(popStr);
     colorbar;
@@ -639,13 +632,13 @@ if (checkPlotY == 1)
     title('Y-Displacement');
     axis('equal');
 
-	% Get colormap limits and set to edit textboxes
+    % Get colormap limits and set to edit textboxes
     cl = caxis;
     set(handles.editCS_Y,'String',num2str(cl(1)));
     set(handles.editCE_Y,'String',num2str(cl(2)));
     set(handles.editCS_Y,'Enable','on');
     set(handles.editCE_Y,'Enable','on');
-	set(handles.pushSelectRegion_Y,'Enable','on');                          % Enable pushbutton for region selection
+    set(handles.pushSelectRegion_Y,'Enable','on');                          % Enable pushbutton for region selection
 else
     set(handles.editCS_Y,'Enable','off');
     set(handles.editCE_Y,'Enable','off');
@@ -657,8 +650,7 @@ if (checkPlotTotal == 1)
     figTot = figure(6);
     set(gcf,'Color','White');
     cla; hold on; grid off;
-	surf(XXPlot,YYPlot,ZZPlot,'EdgeColor','none');
-%     surf(quivX,quivY,quivVel,'EdgeColor','none');
+    surf(XXPlot,YYPlot,ZZPlot,'EdgeColor','none');
     colormap(popStr);
     colorbar;
     caxis([min(min(quivVel)) max(max(quivVel))]);
@@ -666,13 +658,13 @@ if (checkPlotTotal == 1)
     title('Total Displacement');
     axis('equal');
     
-	% Get colormap limits and set to edit textboxes
+    % Get colormap limits and set to edit textboxes
     cl = caxis;
     set(handles.editCS_Tot,'String',num2str(cl(1)));
     set(handles.editCE_Tot,'String',num2str(cl(2)));
     set(handles.editCS_Tot,'Enable','on');
     set(handles.editCE_Tot,'Enable','on');
-	set(handles.pushSelectRegion_Tot,'Enable','on');                        % Enable pushbutton for region selection
+    set(handles.pushSelectRegion_Tot,'Enable','on');                        % Enable pushbutton for region selection
 else
     set(handles.editCS_Tot,'Enable','off');
     set(handles.editCE_Tot,'Enable','off');
@@ -996,9 +988,7 @@ drawnow();
 
 v_flpth = uigetdir('C:\Users\Josh\Documents\DIY_BOS\',...
                    'Select Folder with Images');
-               
-% v_flpth = uigetdir('C:\Users\Josh\Documents\YouTube_Files\AAA_DIY_BOS\',...
-%                    'Select Folder with Images');
+
 v_flpth = [v_flpth '\'];
 fprintf('Video directory: %s\n',v_flpth);
 
@@ -1062,7 +1052,6 @@ try
     figure(1);
     imgComp = imfuse(I_RAW{1},I_RAW{v_numFrames},'blend');
     [~,rect] = imcrop(imgComp);
-    % [~,rect] = imcrop(I_RAW{2});                                          % Define crop region from first raw image
     close(1);
     pause(0.25);
 catch
@@ -1284,7 +1273,7 @@ for m = 2:1:v_numFrames                                                     % Lo
 end
 
 % Save relevant variables to base workspace
-assignin('base','v_F',v_F);                                                     % Assembled frames for saving
+assignin('base','v_F',v_F);                                                    % Assembled frames for saving
 
 % Set button colors
 set(hObject,'BackgroundColor',[0.0431 0.5176 0.7804],'ForegroundColor','w');   % Set colors back to normal
@@ -1313,7 +1302,7 @@ v_F     = evalin('base','v_F');
 v = VideoWriter([v_flpth v_movieName]);                                     % Create VideoWriter object with movie name
 v.FrameRate = v_frameRate;                                                  % Set the frame rate
 open(v);                                                                    % Open the video
-writeVideo(v,v_F);                                                            % Write the frames to the video
+writeVideo(v,v_F);                                                          % Write the frames to the video
 close(v);                                                                   % Close the video
 
 % Set button colors
