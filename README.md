@@ -19,3 +19,9 @@ Again, all the files can also be found on my website.
 # Notes
 
 * If you are running this program on a Mac and get an error, there is a good chance it's because of the difference between Windows and Mac when it comes to folder/directory naming.  Try switching all the slashes in the directory name to "/".  For instance, one location where you'll need to change it in the MATLAB code is in the *pushSelectVideoDirectory_Callback* function callback.
+* As of 01/16/21, a new version of the ImageJ script for saving a sequence of images is available.  If you are using the most up-to-date ImageJ version, you should download [BOS_Save_Sequence_v2.ijm](./BOS_Save_Sequence_v2.ijm).  If you want to make this script available automatically every time you open ImageJ (without having to install it every time), add the code in the script to the file called *StartupMacros.fiji.ijm* (the startup macro script for FIJI/ImageJ).  This should be located in the *macros* folder of your installation.  You'll need to copy-paste the code from [BOS_Save_Sequence_v2.ijm](./BOS_Save_Sequence_v2.ijm) in between the braces of the code shown here:
+```
+macro "BOS Save Sequence 2" {
+
+}
+```
