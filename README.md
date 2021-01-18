@@ -25,3 +25,4 @@ macro "BOS Save Sequence 2" {
 
 }
 ```
+* An updated version of the MATLAB code ([GUI_BOS_v3.m](./GUI_BOS_v3.m)) was uploaded on 01/17/21, which works with the new filenames from the updated ImageJ macro ([BOS_Save_Sequence_v2.ijm](./BOS_Save_Sequence_v2.ijm)).  Note that this updated code only affects the video processing, not the image processing.
